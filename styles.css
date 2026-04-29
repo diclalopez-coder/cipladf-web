@@ -706,7 +706,7 @@ img {
 .whatsapp-widget {
   position: fixed;
   right: 22px;
-  bottom: 22px;
+  bottom: 96px;
   z-index: 30;
   display: inline-flex;
   align-items: center;
@@ -980,7 +980,7 @@ img {
 
   .whatsapp-widget {
     right: 16px;
-    bottom: 16px;
+    bottom: 92px;
     padding-right: 14px;
   }
 
