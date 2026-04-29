@@ -149,7 +149,8 @@ img {
 .hero-media {
   background-image: url("assets/cipladf-hero-nuevo.png");
   background-size: cover;
-  background-position: center 28%;
+  background-position: center top;
+  transform-origin: center top;
   transform: scale(1.02);
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
@@ -766,10 +767,10 @@ img {
 
 @keyframes heroZoom {
   from {
-    transform: scale(1.02) translateY(0);
+    transform: scale(1.02);
   }
   to {
-    transform: scale(1.08) translateY(-12px);
+    transform: scale(1.06);
   }
 }
 
