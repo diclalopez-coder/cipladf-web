@@ -137,6 +137,7 @@ img {
   align-items: end;
   overflow: hidden;
   color: var(--white);
+  background: var(--navy);
   padding: 138px clamp(18px, 5vw, 64px) 82px;
 }
 
@@ -149,7 +150,7 @@ img {
 .hero-media {
   background-image: url("assets/cipladf-hero-nuevo.png");
   background-size: cover;
-  background-position: center top;
+  background-position: center 84px;
   transform-origin: center top;
   transform: scale(1.02);
   animation: heroZoom 18s ease-in-out infinite alternate;
