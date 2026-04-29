@@ -34,6 +34,29 @@ navMenu.querySelectorAll("a").forEach((link) => {
   });
 });
 
+const animatedItems = document.querySelectorAll(
+  ".logo-grid img, .section-heading, .intro > div, .stats-band article, .benefit-list article, .objective-grid article, .agenda-day, .expert-card, .committee-section > div, .price-box p, .included-list li, .contact-actions"
+);
+
+animatedItems.forEach((item, index) => {
+  item.classList.add("reveal");
+  item.style.transitionDelay = `${Math.min(index % 6, 5) * 70}ms`;
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.16 }
+);
+
+animatedItems.forEach((item) => revealObserver.observe(item));
+
 window.addEventListener("scroll", updateHeader);
 
 updateHeader();

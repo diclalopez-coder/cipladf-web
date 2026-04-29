@@ -27,6 +27,7 @@ body {
   font-family: "Inter", Arial, sans-serif;
   color: var(--ink);
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 a {
@@ -70,6 +71,7 @@ img {
 .brand {
   gap: 10px;
   font-weight: 900;
+  animation: slideDown 0.7s ease both;
 }
 
 .brand-mark {
@@ -97,10 +99,12 @@ img {
   border-radius: 999px;
   font-weight: 800;
   font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .nav a:hover {
   background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
 }
 
 .site-header.scrolled .nav a:hover {
@@ -145,8 +149,9 @@ img {
 .hero-media {
   background-image: url("assets/cipladf-hero-nuevo.png");
   background-size: cover;
-  background-position: center 18%;
+  background-position: center 28%;
   transform: scale(1.02);
+  animation: heroZoom 18s ease-in-out infinite alternate;
 }
 
 .hero-overlay {
@@ -158,6 +163,7 @@ img {
 .hero-content {
   position: relative;
   max-width: 920px;
+  animation: heroRise 0.95s ease both;
 }
 
 .eyebrow,
@@ -199,6 +205,8 @@ img {
 }
 
 .button {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -212,7 +220,21 @@ img {
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: -40% auto -40% -70%;
+  width: 42%;
+  transform: skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transition: left 0.55s ease;
+}
+
+.button:hover::after {
+  left: 125%;
 }
 
 .primary {
@@ -248,6 +270,7 @@ img {
   border-radius: 8px;
   background: linear-gradient(135deg, var(--navy-2), var(--blue));
   box-shadow: var(--shadow);
+  animation: floatSoft 5.5s ease-in-out infinite;
 }
 
 .countdown div {
@@ -265,6 +288,7 @@ img {
   color: var(--white);
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1;
+  text-shadow: 0 0 24px rgba(32, 181, 216, 0.32);
 }
 
 .countdown span {
@@ -315,10 +339,14 @@ img {
   width: 100%;
   height: 92px;
   object-fit: contain;
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
+  padding: 12px;
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.32));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo-grid img:hover {
+  transform: translateY(-6px) scale(1.04);
+  filter: drop-shadow(0 18px 28px rgba(245, 154, 19, 0.24));
 }
 
 .section {
@@ -366,6 +394,12 @@ img {
   min-height: 210px;
   padding: 34px clamp(20px, 3vw, 42px);
   border-right: 1px solid var(--line);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.stats-band article:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-6px);
 }
 
 .stats-band article:last-child {
@@ -414,6 +448,16 @@ img {
 
 .benefit-list article {
   padding: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.benefit-list article:hover,
+.objective-grid article:hover,
+.agenda-day:hover,
+.expert-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 60px rgba(6, 16, 34, 0.16);
+  border-color: rgba(245, 154, 19, 0.5);
 }
 
 .benefit-list h3 {
@@ -447,6 +491,7 @@ img {
   color: var(--navy-2);
   font-weight: 800;
   line-height: 1.55;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .agenda-section {
@@ -474,6 +519,7 @@ img {
   border-color: rgba(255, 255, 255, 0.18);
   background: rgba(6, 16, 34, 0.78);
   backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .agenda-day .date {
@@ -532,6 +578,7 @@ img {
   padding: 18px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(6, 16, 34, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .expert-card img {
@@ -541,6 +588,11 @@ img {
   object-position: top center;
   border-radius: 8px;
   border: 2px solid rgba(245, 154, 19, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.expert-card:hover img {
+  transform: scale(1.04);
 }
 
 .expert-card h3,
@@ -641,6 +693,12 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.price-box p:hover {
+  transform: translateX(6px);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .price-box strong {
@@ -671,6 +729,74 @@ img {
 .footer div {
   display: flex;
   gap: 16px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.02) translateY(0);
+  }
+  to {
+    transform: scale(1.08) translateY(-12px);
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 1020px) {
