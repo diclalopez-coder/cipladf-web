@@ -145,7 +145,7 @@ img {
 .hero-media {
   background-image: url("assets/cipladf-hero-nuevo.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 18%;
   transform: scale(1.02);
 }
 
@@ -724,6 +724,10 @@ img {
 
   .hero {
     min-height: 88vh;
+  }
+
+  .hero-media {
+    background-position: center top;
   }
 }
 
