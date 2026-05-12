@@ -35,7 +35,7 @@ navMenu.querySelectorAll("a").forEach((link) => {
 });
 
 const animatedItems = document.querySelectorAll(
-  ".logo-grid img, .section-heading, .intro > div, .stats-band article, .benefit-list article, .objective-grid article, .agenda-day, .expert-card, .committee-section > div, .price-box p, .included-list li, .contact-actions"
+  ".logo-grid img, .section-heading, .intro > div, .stats-band article, .benefit-list article, .objective-grid article, .agenda-day, .panel-feature > div, .panel-highlight, .panelist-grid article, .flyer-gallery img, .expert-card, .committee-section > div, .price-box p, .included-list li, .contact-actions"
 );
 
 animatedItems.forEach((item, index) => {
