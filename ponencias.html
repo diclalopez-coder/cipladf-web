@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal de ponencias CIPLADF 2026 con materiales PDF y recursos audiovisuales del congreso." />
+  <title>Ponencias CIPLADF 2026 | Materiales</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ponencias CIPLADF 2026" />
+  <meta property="og:description" content="Acceso a materiales PDF y recursos audiovisuales del Congreso Interamericano CIPLADF 2026." />
+  <meta property="og:image" content="assets/cipladf-hero-nuevo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="portal-body">
+  <header class="site-header scrolled">
+    <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
+      <img src="assets/cipladf-logo.png" alt="CIPLADF 2026" />
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="navMenu" aria-label="Menu principal">
+      <a href="index.html#agenda">Agenda</a>
+      <a href="index.html#panel">Panel</a>
+      <a href="index.html#expertos">Expertos</a>
+      <a href="ponencias.html">Ponencias</a>
+      <a href="index.html#registro">Registro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portal-hero">
+      <div>
+        <p class="eyebrow">Materiales CIPLADF 2026</p>
+        <h1>Ponencias del congreso</h1>
+        <p>
+          Accede a las ponencias disponibles en PDF y al recurso audiovisual
+          complementario de “Detrás de la estructura”.
+        </p>
+      </div>
+    </section>
+
+    <section class="portal-shell">
+      <form class="login-panel" id="portalLogin">
+        <div>
+          <p class="section-label">Acceso al portal</p>
+          <h2>Ingresa tus credenciales</h2>
+          <p>Utiliza el usuario y contraseña compartidos para entrar al área de materiales.</p>
+        </div>
+
+        <label>
+          Usuario
+          <input type="text" id="portalUser" autocomplete="username" placeholder="Ingresa tu usuario" required />
+        </label>
+        <label>
+          Contraseña
+          <input type="password" id="portalPass" autocomplete="current-password" placeholder="Ingresa tu contraseña" required />
+        </label>
+        <p class="login-error" id="loginError" role="alert"></p>
+        <button class="button primary" type="submit">Acceder a ponencias</button>
+      </form>
+
+      <section class="portal-content" id="portalContent" aria-live="polite">
+        <div class="portal-topline">
+          <div>
+            <p class="section-label">Ponencias CIPLADF 2026</p>
+            <h2>Materiales disponibles</h2>
+          </div>
+          <button class="button secondary logout-button" id="logoutButton" type="button">Cerrar sesión</button>
+        </div>
+
+        <div class="material-grid">
+          <article class="material-card">
+            <p class="material-type">PDF</p>
+            <h3>Inteligencia Artificial aplicada al monitoreo transaccional y reducción de ineficiencias operativas en PLA/FT</h3>
+            <p><strong>Expositor:</strong> Ramón E. Guzmán</p>
+            <p>Material sobre IA, monitoreo transaccional, eficiencia operativa y transformación digital aplicada a PLA/FT.</p>
+            <div class="material-actions">
+              <a class="button primary" href="assets/ponencias/ramon-guzman-inteligencia-artificial-plaft.pdf" target="_blank" rel="noreferrer">Ver PDF</a>
+              <a class="button dark" href="assets/ponencias/ramon-guzman-inteligencia-artificial-plaft.pdf" download>Descargar</a>
+            </div>
+          </article>
+
+          <article class="material-card">
+            <p class="material-type">PDF</p>
+            <h3>Debida Diligencia y Marketing Ético en el sector automotriz</h3>
+            <p><strong>Expositor:</strong> Ramón E. Guzmán</p>
+            <p>Guía práctica para dealers sobre debida diligencia, señales de alerta, enfoque basado en riesgo y cumplimiento PLAFT.</p>
+            <div class="material-actions">
+              <a class="button primary" href="assets/ponencias/ramon-guzman-debida-diligencia-automotriz.pdf" target="_blank" rel="noreferrer">Ver PDF</a>
+              <a class="button dark" href="assets/ponencias/ramon-guzman-debida-diligencia-automotriz.pdf" download>Descargar</a>
+            </div>
+          </article>
+
+          <article class="material-card video-material">
+            <p class="material-type">Video</p>
+            <h3>Detrás de la estructura: identificación de beneficiarios finales y redes corporativas complejas</h3>
+            <p><strong>Expositor:</strong> Marbel</p>
+            <p>Recurso audiovisual complementario asociado a la ponencia “Detrás de la estructura”.</p>
+            <video controls preload="metadata" src="assets/ponencias/detras-de-la-estructura-video.mp4"></video>
+            <div class="material-actions">
+              <a class="button dark" href="assets/ponencias/detras-de-la-estructura-video.mp4" download>Descargar video</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Copyright 2026 CIPLADF. Todos los derechos reservados.
+      <span class="footer-separator">|</span>
+      Web Master <a href="https://www.instagram.com/rogerwebhub/" target="_blank" rel="noreferrer">RogerWebHub</a>
+    </p>
+    <div>
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#agenda">Agenda</a>
+      <a href="ponencias.html">Ponencias</a>
+      <a class="social-icon" href="https://www.instagram.com/cesinternacional/" target="_blank" rel="noreferrer" aria-label="Instagram CES Internacional">
+        <span></span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="ponencias.js"></script>
+</body>
+</html>

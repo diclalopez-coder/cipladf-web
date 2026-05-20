@@ -874,6 +874,236 @@ img {
   line-height: 1.6;
 }
 
+.materials-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.56fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 14% 24%, rgba(32, 181, 216, 0.18), transparent 30%),
+    linear-gradient(135deg, var(--navy), var(--navy-2));
+}
+
+.materials-cta h2 {
+  color: var(--white);
+}
+
+.materials-cta p {
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.75;
+}
+
+.access-box {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: var(--shadow);
+}
+
+.access-box p {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.access-box strong {
+  color: var(--orange);
+}
+
+.portal-body {
+  color: var(--white);
+  background: var(--navy);
+}
+
+.portal-hero {
+  min-height: 520px;
+  display: grid;
+  align-items: end;
+  padding: 150px clamp(18px, 5vw, 64px) 76px;
+  background:
+    linear-gradient(90deg, rgba(6, 16, 34, 0.92), rgba(6, 16, 34, 0.62)),
+    url("assets/cipladf-hero-nuevo.png") center 24% / cover;
+}
+
+.portal-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.92;
+}
+
+.portal-hero p:not(.eyebrow) {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.portal-shell {
+  padding: 90px clamp(18px, 5vw, 64px);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(245, 154, 19, 0.14), transparent 28%),
+    linear-gradient(135deg, #030812, var(--navy));
+}
+
+.login-panel,
+.portal-content {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.login-panel {
+  display: grid;
+  gap: 16px;
+  max-width: 560px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: var(--shadow);
+}
+
+.login-panel h2,
+.portal-topline h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+
+.login-panel p:not(.section-label) {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+
+.login-panel label {
+  display: grid;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 800;
+}
+
+.login-panel input {
+  min-height: 50px;
+  width: 100%;
+  padding: 0 14px;
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: var(--white);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-panel input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(245, 154, 19, 0.18);
+}
+
+.login-error {
+  min-height: 22px;
+  margin: 0;
+  color: #ffb4a8;
+  font-weight: 800;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.portal-content {
+  display: none;
+}
+
+.portal-content.open {
+  display: block;
+}
+
+.portal-topline {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.logout-button {
+  color: var(--white);
+}
+
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.material-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(245, 154, 19, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.material-type {
+  width: max-content;
+  margin: 0 0 16px;
+  padding: 8px 12px;
+  color: var(--navy);
+  border-radius: 999px;
+  background: var(--orange);
+  font-weight: 900;
+}
+
+.material-card h3 {
+  margin: 0 0 16px;
+  color: var(--white);
+  font-size: 1.45rem;
+  line-height: 1.18;
+}
+
+.material-card p {
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.65;
+}
+
+.material-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.video-material {
+  grid-column: span 2;
+}
+
+.video-material video {
+  width: 100%;
+  max-height: 520px;
+  margin: 12px 0 18px;
+  border-radius: 8px;
+  background: #000;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -1035,6 +1265,7 @@ img {
   }
 
   .agenda-grid,
+  .materials-cta,
   .panel-feature,
   .intro,
   .split-section,
@@ -1043,6 +1274,7 @@ img {
   }
 
   .panelist-grid,
+  .material-grid,
   .flyer-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1087,6 +1319,16 @@ img {
   .hero-media {
     background-position: center top;
   }
+
+  .portal-hero {
+    min-height: 460px;
+    padding-top: 128px;
+  }
+
+  .portal-topline {
+    align-items: start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 620px) {
@@ -1102,8 +1344,19 @@ img {
     padding: 118px 18px 70px;
   }
 
+  .portal-hero {
+    min-height: 430px;
+    padding: 120px 18px 58px;
+    background-position: center top;
+  }
+
+  .portal-shell {
+    padding: 64px 18px;
+  }
+
   .hero-actions,
   .contact-actions,
+  .material-actions,
   .footer {
     flex-direction: column;
   }
@@ -1125,8 +1378,19 @@ img {
   .support-logos,
   .panelist-grid,
   .flyer-gallery,
+  .material-grid,
   .expert-grid {
     grid-template-columns: 1fr;
+  }
+
+  .video-material {
+    grid-column: auto;
+  }
+
+  .login-panel,
+  .material-card,
+  .access-box {
+    padding: 20px;
   }
 
   .countdown div {
